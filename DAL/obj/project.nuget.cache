@@ -1,13 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "TH4GaZNg48UqOCt7pLxNH+Txk2T9wX78lXYtEYzZIgEmxi9jDKcBK7IvGlXgyHeTf+Lx/QrEssa/q0uyfJ/eyQ==",
+  "dgSpecHash": "W4hdy8ixjhHpXdec92aBz0jnTrJ+jwpj+m/Tmks5VRYXF/dpfQ6rlGvXv01tfYyfnHPEOsTq25YQv3hgHuBs1Q==",
   "success": true,
   "projectFilePath": "E:\\Il\\TE\\2023-09-25\\Examen\\WebApiProductosTienda\\DAL\\DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alumno\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Alumno\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
-    "C:\\Users\\Alumno\\.nuget\\packages\\konscious.security.cryptography.argon2\\1.3.0\\konscious.security.cryptography.argon2.1.3.0.nupkg.sha512",
-    "C:\\Users\\Alumno\\.nuget\\packages\\konscious.security.cryptography.blake2\\1.1.0\\konscious.security.cryptography.blake2.1.1.0.nupkg.sha512",
     "C:\\Users\\Alumno\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Alumno\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Alumno\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",
