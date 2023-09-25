@@ -27,5 +27,66 @@ namespace DAL
                 throw;
             }
         }
+        public void Eliminar_Producto(int productId)
+        {
+            try
+            {
+                using (var context = new ApplicationDbContext(new DbContextOptions<ApplicationDbContext>()))
+                {
+                    var productToDelete = context.Product.Find(productId);
+
+                    if (productToDelete != null)
+                    {
+                        context.Product.Remove(productToDelete);
+                        context.SaveChanges();
+                        Console.WriteLine("Producto eliminado correctamente.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("No se encontró el producto con el ID especificado.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al eliminar el producto de la base de datos.");
+                Console.WriteLine(ex.ToString());
+                throw;
+            }
+        }
+
+        public void Actualizar_Producto(int productId, EProduct newProductData)
+        {
+            try
+            {
+                using (var context = new ApplicationDbContext(new DbContextOptions<ApplicationDbContext>()))
+                {
+                    var productToUpdate = context.Product.Find(productId);
+
+                    if (productToUpdate != null)
+                    {
+                        // Actualiza los campos del producto con los nuevos datos.
+                        productToUpdate.Name = newProductData.Name;
+                        productToUpdate.Description = newProductData.Description;
+                        productToUpdate.Price = newProductData.Price;
+                        productToUpdate.StockQuantity = newProductData.StockQuantity;
+                        // Agrega otros campos aquí según tu modelo.
+
+                        context.SaveChanges();
+                        Console.WriteLine("Producto actualizado correctamente.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("No se encontró el producto con el ID especificado.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al actualizar el producto en la base de datos.");
+                Console.WriteLine(ex.ToString());
+                throw;
+            }
+        }
     }
 }

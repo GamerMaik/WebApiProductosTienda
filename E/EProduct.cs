@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace ENTIDADES
     public class EProduct
     {
         // Identificador único del producto
+        [Key]
         public int ProductId { get; set; }
 
         // Nombre del producto

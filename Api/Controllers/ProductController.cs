@@ -1,4 +1,5 @@
-﻿using ENTIDADES;
+﻿using DAL;
+using ENTIDADES;
 using LN;
 using Microsoft.AspNetCore.Mvc;
 
@@ -37,6 +38,38 @@ namespace Api.Controllers
                 return BadRequest("Error al Insertar" + ex.Message);
             }
 
+        }
+
+
+        [HttpPost]
+        [Route("Eliminar")]
+        public dynamic Eliminar_Producto(int productId)
+        {
+            try
+            {
+                lnProyectoApi.Eliminar_Producto(productId);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest("Error al Eliminar" + ex.Message);
+            }
+
+        }
+        [HttpPost]
+        [Route("Actualizar")]
+        public void Actualizar_Producto(int productId, EProduct newProductData)
+        {
+            try
+            {
+                lnProyectoApi.Actualizar_Producto(productId, newProductData);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                throw;
+            }
         }
         #endregion
     }

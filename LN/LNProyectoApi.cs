@@ -33,6 +33,30 @@ namespace LN
                 throw;
             }
         }
+        public void Eliminar_Producto(int productId)
+        {
+            try
+            {
+                swLNPersona.Eliminar_Producto(productId);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                throw;
+            }
+        }
+        public void Actualizar_Producto(int productId, EProduct newProductData)
+        {
+            try
+            {
+                swLNPersona.Actualizar_Producto(productId, newProductData);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                throw;
+            }
+        }
         #endregion
     }
 }
