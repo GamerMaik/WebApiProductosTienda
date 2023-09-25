@@ -21,6 +21,6 @@ namespace ENTIDADES
         public decimal Price { get; set; }
 
         // Cantidad en stock del producto
-        public int StockQuantity { get; set; }  
+        public int StockQuantity { get; set; }
     }
 }
