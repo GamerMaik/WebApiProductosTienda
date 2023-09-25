@@ -59,19 +59,22 @@ namespace DAL
         {
             try
             {
+                // Crea un contexto de base de datos utilizando Entity Framework Core.
                 using (var context = new ApplicationDbContext(new DbContextOptions<ApplicationDbContext>()))
                 {
+                    // Busca el producto en la base de datos por su ID.
                     var productToUpdate = context.Product.Find(productId);
 
                     if (productToUpdate != null)
                     {
-                        // Actualiza los campos del producto con los nuevos datos.
+                        // Actualiza los campos del producto con los nuevos datos proporcionados.
                         productToUpdate.Name = newProductData.Name;
                         productToUpdate.Description = newProductData.Description;
                         productToUpdate.Price = newProductData.Price;
                         productToUpdate.StockQuantity = newProductData.StockQuantity;
-                        // Agrega otros campos aquí según tu modelo.
+                        // Puedes agregar más campos aquí según tu modelo de datos.
 
+                        // Guarda los cambios en la base de datos.
                         context.SaveChanges();
                         Console.WriteLine("Producto actualizado correctamente.");
                     }
@@ -83,9 +86,10 @@ namespace DAL
             }
             catch (Exception ex)
             {
+                // Captura y maneja cualquier excepción que pueda ocurrir durante la actualización.
                 Console.WriteLine("Error al actualizar el producto en la base de datos.");
                 Console.WriteLine(ex.ToString());
-                throw;
+                throw; // Relanza la excepción para su manejo por código externo si es necesario.
             }
         }
     }
