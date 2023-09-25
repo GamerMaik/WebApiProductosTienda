@@ -45,6 +45,7 @@ namespace LN
                 throw;
             }
         }
+
         public void Actualizar_Producto(int productId, EProduct newProductData)
         {
             try
