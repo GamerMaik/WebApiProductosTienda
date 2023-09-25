@@ -1,32 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ENTIDADES;
+﻿using Models;
+
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace DAL
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
-        public DbSet<EPersona> Persona { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            if (!optionsBuilder.IsConfigured)
-            {
-                IConfigurationRoot configuration = new ConfigurationBuilder()
-                    .SetBasePath(Directory.GetCurrentDirectory())
-                    .AddJsonFile("appsettings.json")
-                    .Build();
+        }
 
-                string connectionString = configuration.GetConnectionString("DefaultConnection");
-
-                optionsBuilder.UseSqlServer(connectionString);
-            }
+		// Define las DbSet para tus entidades aquí.
+		// El nombre de la variable DbSet tiene que ser igual al de la base de datos
+		public DbSet<Product> Products { get; set; }
+         
+        // Puedes agregar configuraciones adicionales para tus entidades en el método OnModelCreating si lo necesitas.
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // Configuraciones adicionales de entidades aquí
         }
     }
 }

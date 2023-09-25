@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "XMDJNeL3470vSdhDp+JKq0IX+2X7JvIYYXp/sO2FXHeOxDNEt3o2/cVuapLgO1TeZdkdpO6Ceia/+m0tuCabPA==",
+  "success": true,
+  "projectFilePath": "E:\\Il\\TE\\2023-09-25\\Examen\\WebApiProductosTienda\\Tools\\Tools.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alumno\\.nuget\\packages\\konscious.security.cryptography.argon2\\1.3.0\\konscious.security.cryptography.argon2.1.3.0.nupkg.sha512",
+    "C:\\Users\\Alumno\\.nuget\\packages\\konscious.security.cryptography.blake2\\1.1.0\\konscious.security.cryptography.blake2.1.1.0.nupkg.sha512",
+    "C:\\Users\\Alumno\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512"
+  ],
+  "logs": []
+}
