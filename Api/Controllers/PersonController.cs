@@ -5,7 +5,7 @@ using LN;
 namespace Api.Controllers
 {   
     [ApiController]
-    [Route("Persona")]
+    [Route("Product")]
     public class PersonController : ControllerBase
     {
         #region Atributos
@@ -23,12 +23,12 @@ namespace Api.Controllers
         #region Metodos Publicos
 
         [HttpPost]
-        [Route("Insertar")]
-        public dynamic InsertarPersona(EPersona eEPersona)
+        [Route("Insert")]
+        public dynamic InsertarPersona(EProduct eEProduct)
         {
             try
             {
-                lnProyectoApi.Adicionar_EPersona(eEPersona);
+                lnProyectoApi.Adicionar_eEProduct(eEProduct);
                 return Ok();
             }
             catch (Exception ex)
