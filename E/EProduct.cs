@@ -24,3 +24,5 @@ namespace ENTIDADES
         public int StockQuantity { get; set; }  
     }
 }
+//comida
+//dame
