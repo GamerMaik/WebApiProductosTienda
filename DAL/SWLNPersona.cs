@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ENTIDADES;
 using Microsoft.EntityFrameworkCore;
 
 namespace DAL
 {
     public class SWLNPersona
-    {      
+    {
+        // Método para agregar un producto a la base de datos.
         public void Adicionar_EProducto(EProduct eProduct)
         {
             try
@@ -27,6 +24,8 @@ namespace DAL
                 throw;
             }
         }
+
+        // Método para eliminar un producto por su ID.
         public void Eliminar_Producto(int productId)
         {
             try
@@ -55,6 +54,7 @@ namespace DAL
             }
         }
 
+        // Método para actualizar un producto por su ID con nuevos datos.
         public void Actualizar_Producto(int productId, EProduct newProductData)
         {
             try
