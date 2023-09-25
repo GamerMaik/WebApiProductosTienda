@@ -10,13 +10,13 @@ namespace DAL
 {
     public class SWLNPersona
     {      
-        public void Adicionar_Persona(EPersona eEpersona)
-        {                  
+        public void Adicionar_EProducto(EProduct eProduct)
+        {
             try
             {
                 using (var context = new ApplicationDbContext(new DbContextOptions<ApplicationDbContext>()))
                 {
-                    context.Persona.Add(eEpersona);
+                    context.Product.Add(eProduct);
                     context.SaveChanges();
                 }
             }

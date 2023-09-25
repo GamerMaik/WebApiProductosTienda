@@ -22,22 +22,6 @@ namespace Api.Controllers
 
         #region Metodos Publicos
 
-        [HttpPost]
-        [Route("Insertar")]
-        public dynamic InsertarPersona(EPersona eEPersona)
-        {
-            try
-            {
-                lnProyectoApi.Adicionar_EPersona(eEPersona);
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-
-                return BadRequest("Error al Insertar" + ex.Message);
-            }
-
-        }
         #endregion
     }
 }

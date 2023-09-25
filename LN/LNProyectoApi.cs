@@ -21,18 +21,17 @@ namespace LN
         #endregion
 
         #region Metodos Publicos
-        public void Adicionar_EPersona(EPersona eEPersona)
+        public void Adicionar_EProducto(EProduct eEProduct)
         {
             try
             {
-                swLNPersona.Adicionar_Persona(eEPersona);
+                swLNPersona.Adicionar_EProducto(eEProduct);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
                 throw;
             }
-
         }
         #endregion
     }
