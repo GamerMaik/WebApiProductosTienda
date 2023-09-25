@@ -9,20 +9,20 @@ namespace ENTIDADES
 {
     public class EProduct
     {
-        // Identificador único del producto
+        // Identificador único del productos
         [Key]
         public int ProductId { get; set; }
 
-        // Nombre del producto
+        // Nombre del productos
         public string Name { get; set; }
 
-        // Descripción del producto
+        // Descripción del productos
         public string Description { get; set; }
 
-        // Precio del producto
+        // Precio del productos
         public decimal Price { get; set; }
 
-        // Cantidad en stock del producto
+        // Cantidad en stock del productos
         public int StockQuantity { get; set; }
     }
 }

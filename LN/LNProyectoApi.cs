@@ -16,7 +16,9 @@ namespace LN
         #region Constructor
         public LNProyectoApi()
         {
+
             swLNPersona = new SWLNPersona();
+
         }
         #endregion
 
