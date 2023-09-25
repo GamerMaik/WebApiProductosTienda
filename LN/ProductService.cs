@@ -24,7 +24,7 @@ namespace LN
         {
             try
             {
-                //_productRepository.Adicionar_eEProduct(eEProduct);
+                _productRepository.Adicionar_eEProduct(product);
             }
             catch (Exception ex)
             {
@@ -36,8 +36,8 @@ namespace LN
 
         public bool UpdatePerson()
         {
-            //return _productRepository.UpdatePerson();
-            return true;
+            return _productRepository.UpdatePerson();
+            //return true;
         }
     }
 }
